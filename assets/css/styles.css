@@ -1,0 +1,184 @@
+/* Variables CSS */
+:root {
+    /* Paleta de colores */
+    --color-principal: #80BE79;
+    --color-fondo:#FFFFFF;
+    --color-texto:#344856;
+    --color-fondo-nosotros: #F2F9F2;
+    --color-fondo-footer:#203646;
+    --color-texto-footer:#C8D4E2;
+
+    /* Tipografias */
+    --fuente1: "Poppins", sans-serif;
+    --fuente2: "Inter Tight", sans-serif;
+    --fuente3: Arial, Helvetica, sans-serif;
+
+    
+}
+
+
+
+
+/* Selectores */
+
+/* Selector universal de elementos */
+* {
+    /* Elimina todos los espacios predeterminados */
+    margin: 0;
+    padding: 0;
+
+    /* Evitar que la cajas cambien de tamaño al agregar espacios */
+    box-sizing: border-box;
+}
+
+
+/* Selectores de tipo etiqueta HTML */
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight:600;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+h2::before {
+    background-color: #80BE79;
+    margin: 0px 0px 0px -40px;
+}
+
+body {
+    font-family: var(--fuente1);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Elimina el espacio inferior predeterminado del objeto */
+img {
+    display: block;
+}
+
+
+
+/* Selectores de tipo identificador (id) */
+#nosotros {
+    background-color: var(--color-fondo-nosotros);
+    color: var(--color-texto);
+}
+
+#servicios {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+#servicios h3 {
+    color: var(--color-principal);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+#servicios a {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    padding: 8px 16px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.4s ease-in-out;
+}
+
+#servicios a:hover{
+    background-color: #63945e;
+}
+
+#pie {
+    background-color: var(--color-fondo-footer);
+    color: var(--color-texto-footer);
+}
+
+#pie a {
+    color: var(--color-fondo);
+    text-decoration: none; /* Quita el subrayado */
+    transition: all 0.4s ease-in-out;
+}
+
+#pie a:hover {
+    color: var(--color-principal);
+}
+
+
+/* Selectores de tipo clase (class) */
+.container {
+    max-width: 70%;
+    margin: auto;
+}
+
+.padding-xl {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.padding-xs {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* Flexbox: Alineación flexible en fila */
+.row {
+    display: flex; /* Activa flexbox */
+    flex-direction: row; /* Orientación en fila */
+    gap: 20px; /* Espacio entre cajas */
+    align-items: center; /* Centrado vertical del contenido*/
+}
+
+
+/* Ajusta la imagen al ancho de su caja padre */
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+.logo-ancho {
+    width: 200px;
+}
+
+/* Barra de navegación */
+.nav-bar, .footer-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-family: var(--fuente1);
+    color: var(--color-texto);
+    padding: 10px;
+    border-radius: 20px;
+    transition: all 0.4s ease-in-out;
+}
+
+.nav-menu a:hover {
+    color: var(--color-fondo);
+    background-color: var(--color-principal);
+    
+}
+
+
+.nosotros-col1 {
+    flex: 2;  /*Ancho*/
+    
+    
+}
+
+.nosotros-col2 {
+    flex: 1;  /*Ancho*/
+}
+
