@@ -182,3 +182,8 @@ img {
     flex: 1;  /*Ancho*/
 }
 
+.form-flex {
+    display: flex ;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
