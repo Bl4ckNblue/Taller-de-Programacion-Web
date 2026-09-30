@@ -5,8 +5,10 @@
     --color-fondo:#FFFFFF;
     --color-texto:#344856;
     --color-fondo-nosotros: #F2F9F2;
+    --color-fondo-citas: #F2F9F2;
     --color-fondo-footer:#203646;
     --color-texto-footer:#C8D4E2;
+    --color-form-submit:#203646;
 
     /* Tipografias */
     --fuente1: "Poppins", sans-serif;
@@ -41,10 +43,6 @@ h2 {
     margin-bottom: 30px;
 }
 
-h2::before {
-    background-color: #80BE79;
-    margin: 0px 0px 0px -40px;
-}
 
 body {
     font-family: var(--fuente1);
@@ -60,13 +58,11 @@ img {
 
 
 /* Selectores de tipo identificador (id) */
-#citas {
-    background-color: var(--color-principal);
-}
 #nosotros {
     background-color: var(--color-fondo-nosotros);
     color: var(--color-texto);
 }
+
 
 #servicios {
     background-color: var(--color-fondo);
@@ -88,11 +84,11 @@ img {
     padding: 8px 16px;
     text-decoration: none;
     margin-top: 20px;
-    transition: all 0.4s ease-in-out;
 }
 
-#servicios a:hover{
-    background-color: #63945e;
+#citas {
+    background-color: var(--color-fondo-citas);
+    color: var(--color-texto);
 }
 
 #pie {
@@ -132,7 +128,7 @@ img {
     display: flex; /* Activa flexbox */
     flex-direction: row; /* Orientación en fila */
     gap: 20px; /* Espacio entre cajas */
-    align-items: center; /* Centrado vertical del contenido*/
+    align-items: center; /* Centrado vertical del contenido */
 }
 
 
@@ -161,7 +157,6 @@ img {
 
 .nav-menu a {
     text-decoration: none;
-    font-family: var(--fuente1);
     color: var(--color-texto);
     padding: 10px;
     border-radius: 20px;
@@ -169,37 +164,26 @@ img {
 }
 
 .nav-menu a:hover {
-    color: var(--color-fondo);
     background-color: var(--color-principal);
-    
+    color: var(--color-fondo);
 }
 
 
 .nosotros-col1 {
-    flex: 2;  /*Ancho*/
-    
-    
+    flex: 2; /* Ancho */
 }
 
+
+
 .nosotros-col2 {
-    flex: 1;  /*Ancho*/
+    flex: 1; /* Ancho */
 }
 
 .form-flex {
-    display: flex ;
+    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que los hijos se muestren en multiples filas */
     gap: 20px;
-}
-
-.form-control {
-    width: 100%;
-    font: inherit;
-    padding: 10px 5px;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid var(--color=texto-footer);
 }
 
 .form-col-50 {
@@ -209,3 +193,36 @@ img {
 .form-col-100 {
     flex: 100%;
 }
+
+.form-control {
+    width: 100%;
+    font: inherit; /* Hereda la fuente del body */
+    padding: 10px 5px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color-texto-footer);
+}
+
+.form-link {
+    color: var(--color-principal);
+    text-decoration: none;
+    font-weight: 500; /* Semibold*/
+}
+
+
+.form-submit {
+    background-color: var(--color-form-submit);
+    color: var(--color-fondo);
+    font: inherit;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.form-submit:hover {
+    background-color: var(--color-principal);
+}
+
+
