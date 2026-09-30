@@ -9,6 +9,8 @@
     --color-fondo-footer:#203646;
     --color-texto-footer:#C8D4E2;
     --color-form-submit:#203646;
+    --color-borde-tabla:#C8D4E2;
+    --color-fondo-promociones: #F2F9F2;
 
     /* Tipografias */
     --fuente1: "Poppins", sans-serif;
@@ -51,7 +53,7 @@ body {
 }
 
 /* Elimina el espacio inferior predeterminado del objeto */
-img {
+img, video, iframe {
     display: block;
 }
 
@@ -88,6 +90,16 @@ img {
 
 #citas {
     background-color: var(--color-fondo-citas);
+    color: var(--color-texto);
+}
+
+#tarifas {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+#promociones {
+    background-color: var(--color-fondo-promociones);
     color: var(--color-texto);
 }
 
@@ -225,4 +237,62 @@ img {
     background-color: var(--color-principal);
 }
 
+.form-noresize{
+    resize: none;
+}
 
+.tbl-tarifas {
+    width: 100%;
+    border-collapse: collapse; /*Combinar los bordes*/
+}
+
+.tbl-tarifas th,td{
+    border: 1px solid var(--color-borde-tabla);
+    padding: 15px;
+}
+
+.tbl-tarifas thead {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    text-transform: uppercase;
+}
+
+.tbl-tarifas th {
+    font-weight: 500; /*Semibold*/
+}
+
+.tbl-tarifas tbody,tfoot {
+    color: var(--color-principal);
+}
+
+.tbl-tarifas tfoot {
+    text-align: right;
+    font-size: small;
+    font-style: italic;
+}
+
+.tbl-tarifas tbody tr td:nth-child(2){
+    text-align: center;
+}
+
+.tbl-tarifas tbody tr td:nth-child(3){
+    text-align: right;
+    font-weight: 550;
+}
+
+.video-fluid {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.promocion-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.promocion-flex article {
+    flex: 1;
+}
