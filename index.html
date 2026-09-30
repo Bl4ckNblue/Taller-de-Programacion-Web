@@ -162,59 +162,70 @@
             </div>
         </section>
 
-        <section id="citas" class="padding-xl&gt;
-            &lt;div class=" container="">
-                <form action="">
-                        <h2>Formulario</h2>
-                        <div class="form-flex">
-                            <!-- Campo Servicio -->
-                            <div class="form-col-50">
-                                <select class="form-control" name="" id="" required="">
-                                    <option value="" selected="" hidden="">Escoja un servicio</option>
-                                    <option value="S01">Medida de la vista</option>
-                                    <option value="S02">Servicio2</option>
-                                    <option value="S03">Servicio3</option>
-                                    <option value="S04">Servicio4</option>
-                                </select>
-                            </div>
+        <!-- Registro de citas -->
+        <section id="citas" class="padding-xl">
+            <div class="container">
+                <h2>Registro de citas</h2>
 
-                            <!-- Campo Nombre -->
-                            <div class="form-col-50">
-                                <input class="form-control" type="text" required="" placeholder="Nombre Completo">
-                            </div>
+                <!-- Objeto formulario -->
+                <form action="grabar-cita.php" method="post">
+                    <!-- Caja flexbox -->
+                    <div class="form-flex">
 
-                            <!-- Campo Email -->
-                            <div class="form-col-50">
-                                <input class="form-control" type="email" required="" placeholder="Email">
-                            </div>
-
-                            <!-- Campo Asunto -->
-                            <div class="form-col-50">
-                                <input class="form-control" type="text" required="" placeholder="Asunto">
-                            </div>
-
-                            <!-- Campo Mensaje -->
-                            <div class="form-col-100">
-                                <textarea class="form-control" name="" id="" placeholder="Dejanos tu mensaje"></textarea>
-                            </div>
-
-                            <!-- Campo Captcha -->
-                            <div class="form-col-100">
-                                <input class="form-control" type="text" placeholder="2+3 = ?">
-                            </div>
-
-                            <!-- Campo T&C -->
-                            <div class="form-col-100">
-                                <input type="checkbox" name="" id=""> Declaro expresamente haber leído y aceptado las Políticas de Privacidad.
-                            </div>
-
-                            <!-- Boton Enviar -->
-                            <div class="form-col-100">
-                                <button type="submit">Enviar Mensaje</button>
-                            </div>
+                        <!-- Campos de formulario -->
+                        
+                        <!-- Campo Servicio -->
+                        <div class="form-col-50">
+                            <select class="form-control" name="" id="" required>
+                                <option value="" selected hidden>Escoja un Servicio</option>
+                                <option value="S01">Medida de la vista</option>
+                                <option value="S02">Compra de lentes y monturas</option>
+                                <option value="S03">Examen de campo visual</option>
+                                <option value="S04">Cirugía de cataratas</option>
+                            </select>
                         </div>
+
+                        <!-- Campo Nombre completo -->
+                        <div class="form-col-50">
+                            <input class="form-control" type="text" required placeholder="Nombre completo">
+                        </div>
+
+                        <!-- Campo Correo electrónico -->
+                        <div class="form-col-50">
+                            <input class="form-control" type="email" required placeholder="Correo electrónico">
+                        </div>
+
+                        <!-- Campo Asunto o Tema -->
+                        <div class="form-col-50">
+                            <input class="form-control" type="text" required placeholder="Asunto">
+                        </div>
+
+                        <!-- Campo Mensaje -->
+                        <div class="form-col-100">
+                            <textarea class="form-control" name="" id="" placeholder="Déjenos su mensaje" required cols="40" rows="6"></textarea>
+                        </div>
+
+                        <!-- Campo Captcha -->
+                        <div class="form-col-100">
+                            <input class="form-control" type="text" required placeholder="2+3=?">
+                        </div>
+
+                        <!-- Campo Términos y condiciones -->
+                        <div class="form-col-100">
+                            <input type="checkbox" required>
+                            <label for="">
+                                Declaro expresamente haber leído y aceptado las
+                                <a class="form-link" target="_blank" href="https://www.utp.edu.pe/web/politicas-privacidad">Políticas de Privacidad.</a>
+                            </label>
+                        </div>
+
+                        <!-- Botón Enviar mensaje -->
+                        <div class="form-col-100">
+                            <button class="form-submit" type="submit">Enviar mensaje</button>
+                        </div>
+                    </div>
                 </form>
-            
+            </div>
         </section>
     </main>
 
