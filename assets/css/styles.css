@@ -10,7 +10,7 @@
     --color-texto-footer:#C8D4E2;
     --color-form-submit:#203646;
     --color-borde-tabla:#C8D4E2;
-    --color-fondo-promociones: #F2F9F2;
+    --color-fondo-promocion: #F2F9F2;
 
     /* Tipografias */
     --fuente1: "Poppins", sans-serif;
@@ -37,6 +37,10 @@
 
 
 /* Selectores de tipo etiqueta HTML */
+html{
+    scroll-behavior: smooth;
+}
+
 h2 {
     text-align: center;
     font-size: 30px;
@@ -60,6 +64,14 @@ img, video, iframe {
 
 
 /* Selectores de tipo identificador (id) */
+#cabecera {
+    position: sticky;
+    top: 0px;
+    background-color: var(--color-fondo);
+    box-shadow: 0 0 3px 0 rgba(0,0,0,.2);
+    z-index: 100000;
+}
+
 #nosotros {
     background-color: var(--color-fondo-nosotros);
     color: var(--color-texto);
@@ -99,7 +111,7 @@ img, video, iframe {
 }
 
 #promociones {
-    background-color: var(--color-fondo-promociones);
+    background-color: var(--color-fondo-promocion);
     color: var(--color-texto);
 }
 
@@ -118,7 +130,16 @@ img, video, iframe {
     color: var(--color-principal);
 }
 
+#top-bar {
+    padding: 8px 0px;
+    background-color: var(--color-texto);
+    font-size: 0.8rem;
+}
 
+#portada {
+    /* Controla la posicion de las cajas hijos dentro de la caja padre */
+    position: relative;
+}
 /* Selectores de tipo clase (class) */
 .container {
     max-width: 70%;
@@ -237,16 +258,18 @@ img, video, iframe {
     background-color: var(--color-principal);
 }
 
-.form-noresize{
+.form-noresize {
     resize: none;
 }
 
+
 .tbl-tarifas {
     width: 100%;
-    border-collapse: collapse; /*Combinar los bordes*/
+    border-collapse: collapse; /* Combinar los bordes */
 }
 
-.tbl-tarifas th,td{
+.tbl-tarifas th, 
+.tbl-tarifas td {
     border: 1px solid var(--color-borde-tabla);
     padding: 15px;
 }
@@ -258,34 +281,30 @@ img, video, iframe {
 }
 
 .tbl-tarifas th {
-    font-weight: 500; /*Semibold*/
-}
-
-.tbl-tarifas tbody,tfoot {
-    color: var(--color-principal);
+    font-weight: 500; /* Semibold */
 }
 
 .tbl-tarifas tfoot {
     text-align: right;
-    font-size: small;
+    font-size: smaller;
     font-style: italic;
 }
 
-.tbl-tarifas tbody tr td:nth-child(2){
+.tbl-tarifas tbody tr td:nth-child(2) {
     text-align: center;
 }
 
-.tbl-tarifas tbody tr td:nth-child(3){
+.tbl-tarifas tbody tr td:nth-child(3) {
     text-align: right;
-    font-weight: 550;
+    font-weight: bold;
 }
 
 .video-fluid {
     width: 100%;
     height: auto;
-    aspect-ratio: 16/9;
-    border: 0;
+    aspect-ratio: 16 / 9;
 }
+
 
 .promocion-flex {
     display: flex;
@@ -298,15 +317,89 @@ img, video, iframe {
     flex: 1;
 }
 
-.promocion-flex a {
-    background-color: var(--color-form-submit);
-    color: var(--color-fondo);
-    font: inherit;
-    padding: 10px 30px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.4s ease-in-out;
+.top-bar-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+
+}
+
+.top-bar-flex a{
     text-decoration: none;
-    margin-top: 20px;
+    color: var(--color-fondo);
+    transition: all 0.4s ease-in-out;
+}
+
+.top-bar-flex a:hover{
+    color: var(--color-principal);
+}
+
+.top-contacto {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.portada-texto {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 520px;
+    padding: 20px;
+    background-color: rgba(0,0,0,.5);
+    color: var(--color-fondo);
+    border-radius: 20px;
+}
+
+.portada-texto h1{
+    font-size: 44px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.portada-texto p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.portada-texto a{
+    text-decoration: none;
+    color: var(--color-fondo);
     display: inline-block;
+    background-color: var(--color-principal);
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.portada-texto a:hover{
+    background-color:#4b7546;
+    color: var(--color-fondo-promocion);
+}
+
+.btn-scrollup {
+    position: fixed;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.btn-scrollup a{
+    transform: scale(1,2);
+}
+
+.btn-scrollup :hover{
+    transform: scale(1.12); /* Crece un 12% de forma proporcional sin deformarse */
+    cursor: pointer;
 }
