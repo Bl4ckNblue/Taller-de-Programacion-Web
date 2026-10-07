@@ -5,14 +5,13 @@
 <html lang="es">
 
 <!-- Configuración de la página -->
-
 <head>
     <!-- Conjunto de caracteres del idioma español -->
     <meta charset="UTF-8">
-
+    
     <!-- Habilita el diseño web CSS responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <!-- Título de la pestaña en el navegador -->
     <title>Oftalmisalud</title>
 
@@ -29,19 +28,52 @@
 </head>
 
 <!-- Contenido de la página -->
-
 <body>
+
+    <!-- Top-bar -->
+    <header id="top-bar">
+        <div class="container">
+            <!-- Flexbox del Top-bar -->
+            <div class="top-bar-flex">
+                <!-- Contactos -->
+                <div class="top-contacto">
+                    <!-- Telefono -->
+                    <a href="tel:+51987654321" >
+                        <i class="fa-solid fa-phone"></i> (+51) 987-654-321
+                    </a>
+                    <!-- Correo -->
+                    <a href="mailto:info@oftalmisalud.com.pe&subject=Informacion">
+                        <i class="fa-solid fa-envelope"></i> info@oftalmisalud.com.pe
+                    </a>
+                </div>
+                <!-- Redes Sociales -->
+                <div class="top-rs">
+                    <a target="_blank" href="https://facebook.com/utp.peru">
+                        <i class="fa-brands fa-facebook fa-xl"></i>
+                    </a>
+                    <a target="_blank" href="https://instagram.com">
+                        <i class="fa-brands fa-instagram fa-xl"></i>
+                    </a>
+                    <a target="_blank" href="https://api.whatsapp.com/send/?phone=51905435005&text=Hola, necesito información sobre sus servicios">
+                        <i class="fa-brands fa-whatsapp fa-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
     <!-- Cabecera de página -->
-    <header class="padding-xs">
+    <header id="cabecera" class="padding-xs">
         <!-- Ajustar el ancho del contenido y centrar -->
         <div class="container">
             <!-- Barra de navegación (navbar) / Alineamiento flexible de los elementos -->
             <div class="nav-bar">
                 <!-- Logo -->
                 <div class="logo-ancho">
-                    <a href="index.html" aria-label="Inicio - Oftalmisalud" title="Inicio">
-                        <img class="img-fluid" src="assets/img/logo_oftalmisalud.png" alt="Logo de Oftalmisalud">
-                    </a>
+                    <a href="index.html" title="Inicio">
+                        <img class="img-fluid" src="assets/img/logo_oftalmisalud.png" alt="">
+                    </a>                    
                 </div>
 
                 <!-- Barra de menú -->
@@ -64,11 +96,17 @@
             <img src="assets/img/banner.jpg" alt="" class="img-fluid">
         </section> -->
 
-        <!-- Video de Portada -->
+        <!-- Video de portada -->
         <section id="portada">
-            <video autoplay muted loop class="video-fluid" playsinline>
+            <video class="video-fluid" autoplay muted loop>
                 <source src="assets/video/cirugia.mp4" type="video/mp4">
             </video>
+
+            <div class="portada-texto">
+                <h1>Cuidamos tu salud visual</h1>
+                <p>Especialistas y Tecnologia al servicio de tus ojos</p>
+                <a href="">Reserva una cita</a>
+            </div>
         </section>
 
         <!-- Sobre Nosotros -->
@@ -80,12 +118,7 @@
                     <!-- Columna 1 -->
                     <div class="nosotros-col1">
                         <h2>Sobre Nosotros</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit placeat quia eveniet
-                            voluptatem dolorum, debitis minima aliquam reiciendis cum libero, assumenda alias fugit iure
-                            unde vitae dignissimos maiores praesentium optio consequuntur dolor ratione vel a. Eligendi
-                            ad culpa veniam dolore dignissimos expedita similique voluptate repellat itaque molestiae
-                            adipisci fugit vitae, atque sint praesentium. Eligendi, commodi vero excepturi ex
-                            exercitationem ratione.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit placeat quia eveniet voluptatem dolorum, debitis minima aliquam reiciendis cum libero, assumenda alias fugit iure unde vitae dignissimos maiores praesentium optio consequuntur dolor ratione vel a. Eligendi ad culpa veniam dolore dignissimos expedita similique voluptate repellat itaque molestiae adipisci fugit vitae, atque sint praesentium. Eligendi, commodi vero excepturi ex exercitationem ratione.</p>
                         <a href="#">Conoce más sobre nosotros</a>
                     </div>
 
@@ -110,10 +143,7 @@
                         <div>
                             <img src="assets/img/ocu1.jpg" alt="" class="img-fluid">
                             <h3>Servicio 1</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aperiam accusamus
-                                cupiditate nesciunt laudantium consectetur laboriosam officia beatae dignissimos
-                                incidunt aliquid, accusantium soluta neque repellendus corrupti deleniti dolorum, fuga
-                                sequi?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aperiam accusamus cupiditate nesciunt laudantium consectetur laboriosam officia beatae dignissimos incidunt aliquid, accusantium soluta neque repellendus corrupti deleniti dolorum, fuga sequi?</p>
                             <a href="#">Conocer más</a>
                         </div>
                     </div>
@@ -124,12 +154,9 @@
                         <div>
                             <img src="assets/img/ocu2.jpg" alt="" class="img-fluid">
                             <h3>Servicio 2</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aperiam accusamus
-                                cupiditate nesciunt laudantium consectetur laboriosam officia beatae dignissimos
-                                incidunt aliquid, accusantium soluta neque repellendus corrupti deleniti dolorum, fuga
-                                sequi?</p>
-                            <a href="#">Conocer más</a>
-                        </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aperiam accusamus cupiditate nesciunt laudantium consectetur laboriosam officia beatae dignissimos incidunt aliquid, accusantium soluta neque repellendus corrupti deleniti dolorum, fuga sequi?</p>
+                            <a href="#">Conocer más</a>                            
+                        </div>                        
                     </div>
 
                     <!-- Columna 3 -->
@@ -138,12 +165,9 @@
                         <div>
                             <img src="assets/img/ocu3.jpg" alt="" class="img-fluid">
                             <h3>Servicio 3</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aperiam accusamus
-                                cupiditate nesciunt laudantium consectetur laboriosam officia beatae dignissimos
-                                incidunt aliquid, accusantium soluta neque repellendus corrupti deleniti dolorum, fuga
-                                sequi?</p>
-                            <a href="#">Conocer más</a>
-                        </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aperiam accusamus cupiditate nesciunt laudantium consectetur laboriosam officia beatae dignissimos incidunt aliquid, accusantium soluta neque repellendus corrupti deleniti dolorum, fuga sequi?</p>
+                            <a href="#">Conocer más</a>                            
+                        </div>                        
                     </div>
 
                     <!-- Columna 4 -->
@@ -152,10 +176,8 @@
                         <div>
                             <img src="assets/img/ocu4.jpg" alt="" class="img-fluid">
                             <h3>Servicio 4</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aperiam accusamus
-                                cupiditate nesciunt
-                                laudantium consectetur laboriosam officia beatae dignissimos incidunt aliquid,
-                                accusantium soluta neque
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aperiam accusamus cupiditate nesciunt
+                                laudantium consectetur laboriosam officia beatae dignissimos incidunt aliquid, accusantium soluta neque
                                 repellendus corrupti deleniti dolorum, fuga sequi?</p>
                             <a href="#">Conocer más</a>
                         </div>
@@ -175,10 +197,10 @@
                     <div class="form-flex">
 
                         <!-- Campos de formulario -->
-
+                        
                         <!-- Campo Servicio -->
                         <div class="form-col-50">
-                            <select class="form-control" required>
+                            <select class="form-control" name="" id="" required>
                                 <option value="" selected hidden>Escoja un Servicio</option>
                                 <option value="S01">Medida de la vista</option>
                                 <option value="S02">Compra de lentes y monturas</option>
@@ -204,7 +226,7 @@
 
                         <!-- Campo Mensaje -->
                         <div class="form-col-100">
-                            <textarea class="form-control form-noresize" placeholder="Déjenos su mensaje" required cols="40" rows="6"></textarea>
+                            <textarea class="form-control form-noresize" name="" id="" placeholder="Déjenos su mensaje" required cols="40" rows="6"></textarea>
                         </div>
 
                         <!-- Campo Captcha -->
@@ -215,7 +237,7 @@
                         <!-- Campo Términos y condiciones -->
                         <div class="form-col-100">
                             <input type="checkbox" required>
-                            <label>
+                            <label for="">
                                 Declaro expresamente haber leído y aceptado las
                                 <a class="form-link" target="_blank" href="https://www.utp.edu.pe/web/politicas-privacidad">Políticas de Privacidad.</a>
                             </label>
@@ -230,23 +252,24 @@
             </div>
         </section>
 
-        <!-- Tarifario de Servicios -->
+
+        <!-- Tarifario de servicios -->
         <section id="tarifas" class="padding-xl">
             <div class="container">
                 <h2>Tarifas de Servicios</h2>
 
-                <!-- Objeto Tabla -->
+                <!-- Objeto tabla -->
                 <table class="tbl-tarifas">
-                    <!-- Cabecera de Tabla -->
+                    <!-- Cabecera de tabla -->
                     <thead>
                         <tr>
-                            <th>Descripcion del Servicio</th>
-                            <th>Duracion</th>
+                            <th>Descripción del servicio</th>
+                            <th>Duración</th>
                             <th>Precio<sup>*</sup></th>
                         </tr>
                     </thead>
 
-                    <!-- Cuerpo de Tabla -->
+                    <!-- Cuerpo de tabla -->
                     <tbody>
                         <tr>
                             <td>Medida de la vista</td>
@@ -254,18 +277,18 @@
                             <td>S/ 80.00</td>
                         </tr>
                         <tr>
-                            <td>Examen de Campo Visual</td>
+                            <td>Examen de campo visual</td>
                             <td>20 minutos</td>
                             <td>S/ 40.00</td>
                         </tr>
                         <tr>
-                            <td>Examen de Fondo de Ojos</td>
+                            <td>Examen de fondo de ojo</td>
                             <td>15 minutos</td>
                             <td>S/ 50.00</td>
                         </tr>
                     </tbody>
 
-                    <!-- Pie de Tabla -->
+                    <!-- Pie de tabla -->
                     <tfoot>
                         <tr>
                             <td colspan="3">(*) Precios actualizados al 30/09/2026</td>
@@ -278,17 +301,15 @@
         <!-- Promociones del mes -->
         <section id="promociones" class="padding-xl">
             <div class="container">
-                <h2>Promociones del Mes</h2>
+                <h2>Promociones del mes</h2>
                 <div class="promocion-flex">
                     <article>
-                        <h3>Oferta de Primavera</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit officia quam natus
-                            asperiores delectus eligendi deleniti nesciunt, alias odio, tenetur quod iure. Dolorem nulla
-                            distinctio hic ullam, dolorum quaerat!</p>
-                        <a href="#">Ver mas</a>
+                        <h3>Oferta de primavera</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam commodi nesciunt voluptatem nemo magni molestias sapiente perferendis sequi odio ex. Repellendus sint, adipisci dignissimos nesciunt excepturi magni perspiciatis ea voluptatum.</p>
+                        <a href="#">Ver más</a>
                     </article>
                     <article>
-                        <iframe class="video-fluid" width="560" height="315" src="https://www.youtube.com/embed/0SkvXTDSkho?si=2Ny1-WHfQZkk58NF" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe class="video-fluid" width="560" height="315" src="https://www.youtube.com/embed/eWmO8eUb8kE?si=1mle7h6DWKueAmCr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </article>
                 </div>
             </div>
@@ -310,19 +331,23 @@
 
                 <!-- Redes sociales -->
                 <div>
-                    <a target="_blank" rel="noopener noreferrer" href="https://facebook.com/utp.peru" aria-label="Página de Facebook de Oftalmisalud">
-                        <i class="fa-brands fa-facebook fa-xl" aria-hidden="true"></i>
+                    <a target="_blank" href="https://facebook.com/utp.peru">
+                        <i class="fa-brands fa-facebook fa-xl"></i>
                     </a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://instagram.com" aria-label="Perfil de Instagram de Oftalmisalud">
-                        <i class="fa-brands fa-instagram fa-xl" aria-hidden="true"></i>
+                    <a target="_blank" href="https://instagram.com">
+                        <i class="fa-brands fa-instagram fa-xl"></i>
                     </a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=51905435005&text=Hola, necesito información sobre sus servicios" aria-label="Contactar por WhatsApp">
-                        <i class="fa-brands fa-whatsapp fa-xl" aria-hidden="true"></i>
+                    <a target="_blank" href="https://api.whatsapp.com/send/?phone=51905435005&text=Hola, necesito información sobre sus servicios">
+                        <i class="fa-brands fa-whatsapp fa-xl"></i>
                     </a>
                 </div>
             </div>
         </div>
     </footer>
-</body>
 
+    <!-- Boton Scroll Up -->
+    <a class="btn-scrollup" href="#" title="Volver arriba">
+        <i class="fa-solid fa-angles-up"></i>
+    </a>
+</body>
 </html>
